@@ -17,9 +17,7 @@ app.use(express.json())
 app.set("view engine", "ejs");
 app.use(cookieParser());
 app.use(cors({
-  origin: ["http://localhost:5173","http://localhost:5174", "https://nike-frontend-b19bimyki-pratik-amrutkars-projects.vercel.app",
-    "https://nike-frontend-sooty.vercel.app",
-    "https://nike-frontend.vercel.app"],
+  origin: ["http://localhost:5173","http://localhost:5174","https://nike-frontend-sooty.vercel.app"],
   credentials: true
 }))
 
