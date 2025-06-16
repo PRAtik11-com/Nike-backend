@@ -22,6 +22,10 @@ app.use(cors({
 }))
 
 
+app.get("/", (req, res) => {
+  res.send("Backend running...");
+});
+
 //Routes
 app.use("/api/user",userRouter)
 app.use("/api/product",productRouter)
@@ -30,6 +34,9 @@ app.use("/api/order",orderRouter)
 
 app.use("/user", express.static(path.join(__dirname, "uploads/user")));
 app.use("/product", express.static(path.join(__dirname, "uploads/product")));
+
+
+
 
 
 
