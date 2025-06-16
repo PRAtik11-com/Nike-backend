@@ -6,6 +6,7 @@ const userRouter = require("./Routes/user.routes")
 const productRouter = require("./Routes/product.routes")
 const path = require("path"); 
 const cartRouter = require("./Routes/cart.routes");
+const orderRouter = require("./Routes/order.routes");
 require("dotenv").config()
 
 
@@ -25,6 +26,7 @@ app.use(cors({
 app.use("/api/user",userRouter)
 app.use("/api/product",productRouter)
 app.use("/api/cart",cartRouter)
+app.use("/api/order",orderRouter)
 
 app.use("/user", express.static(path.join(__dirname, "uploads/user")));
 app.use("/product", express.static(path.join(__dirname, "uploads/product")));

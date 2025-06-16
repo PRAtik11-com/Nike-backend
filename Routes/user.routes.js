@@ -30,7 +30,7 @@ userRouter.patch(
   usercontroller.verifyPasswordByOtp
 ); // for verify token and reset password
 
-userRouter.get("/logout", Auth, usercontroller.logout); // for logout
+userRouter.get("/logout",  usercontroller.logout); // for logout
 
 // users data get by admin
 userRouter.get("/getallusers", Auth,CheckRole ,usercontroller.getAllUsers); 

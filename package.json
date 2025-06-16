@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "server":"nodemon index.js",
+    "server": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +23,7 @@
     "nodemailer": "^7.0.3",
     "nodemon": "^3.1.10",
     "otp-generator": "^4.0.1",
+    "razorpay": "^2.9.6",
     "regex": "^6.0.1"
   }
 }

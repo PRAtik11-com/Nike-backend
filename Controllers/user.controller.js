@@ -333,15 +333,19 @@ login:async(req,res) => {
       return res.status(400).json({ message: error?.message });
     }
   },
-  logout: async (req, res) => {
-    try {
-      res.clearCookie("auth_token")
-      res.status(200).json({ message: "User logged out successfully" });
-    } catch (error) {
-      res.status(400).json({message:error.message})
-    }
-    
-  },
+  // In your logout route handler
+logout: async (req, res) => {
+  try {
+    res.clearCookie("auth_token", {
+      httpOnly: true,
+      sameSite: "None", 
+      secure: true,    
+    });
+    return res.status(200).json({ message: "Logged out successfully" });
+  } catch (err) {
+    return res.status(500).json({ message: "Logout failed" });
+  }
+},
 
   // admin side
   getAllUsers:async(req,res)=>{
