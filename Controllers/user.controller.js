@@ -194,8 +194,8 @@ login:async(req,res) => {
     res
       .cookie("auth_token", token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production", 
-        sameSite: "Strict",
+        secure: true, 
+        sameSite: "None",
         maxAge: 604800000
       })
       .status(200)
