@@ -127,7 +127,7 @@ const productcontroller = {
   },
 
   getallproducts: async (req, res) => {
-    const limit = parseInt(req.query.limit) || 10;
+    const limit = req.query.limit !== undefined ? parseInt(req.query.limit) : 10;
     const startIndex = parseInt(req.query.startIndex) || 0;
     const sort = req.query.sort || "createdAt";
     const order = req.query.order === "desc" ? -1 : 1;
