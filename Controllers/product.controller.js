@@ -133,7 +133,8 @@ const productcontroller = {
     const order = req.query.order === "desc" ? -1 : 1;
     const search = req.query.search || "";
     const category = req.query.category || "";
-
+    
+    console.log("Query params:", req.query);
     try {
       const filterQuery = {
         $and: [
